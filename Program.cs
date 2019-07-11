@@ -17,7 +17,7 @@ namespace linqed_list
                                     where fruit.StartsWith("L")
                                     select fruit;
 
-      LFruits.ToList().ForEach(fruit => System.Console.WriteLine(fruit));
+      //LFruits.ToList().ForEach(fruit => System.Console.WriteLine(fruit));
 
       // Which of the following numbers are multiples of 4 or 6
       List<int> numbers = new List<int>()
@@ -27,7 +27,7 @@ namespace linqed_list
 
       IEnumerable<int> fourSixMultiples = numbers.Where(number => number % 4 == 0 || number % 6 == 0);
 
-      fourSixMultiples.ToList().ForEach(number => System.Console.WriteLine(number));
+      //fourSixMultiples.ToList().ForEach(number => System.Console.WriteLine(number));
 
 
 
@@ -46,7 +46,21 @@ namespace linqed_list
                                     orderby name descending
                                     select name;
 
-      descend.ToList().ForEach(name => System.Console.WriteLine(name));
+      //descend.ToList().ForEach(name => System.Console.WriteLine(name));
+
+
+      // Build a collection of these numbers sorted in ascending order
+      List<int> newNumbers = new List<int>()
+{
+    15, 8, 21, 24, 32, 13, 30, 12, 7, 54, 48, 4, 49, 96
+};
+
+      IEnumerable<int> sortedNumbers = from number in newNumbers
+                                       orderby number ascending
+                                       select number;
+
+      //sortedNumbers.ToList().ForEach(number => System.Console.WriteLine(number));
+
 
     }
   }
