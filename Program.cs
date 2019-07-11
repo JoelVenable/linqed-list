@@ -1,12 +1,23 @@
 ﻿using System;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace linqed_list
 {
-    class Program
+  class Program
+  {
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
+
+      // find the words that start with "L"
+      List<string> fruits = new List<string>() {
+              "Lemon", "Apple", "Orange", "Lime", "Watermelon", "Longberry"
+          };
+      IEnumerable<string> LFruits = from fruit in fruits
+                                    where fruit.StartsWith("L")
+                                    select fruit;
+
+      LFruits.ToList().ForEach(fruit => System.Console.WriteLine(fruit));
     }
+  }
 }
