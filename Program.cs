@@ -82,6 +82,39 @@ namespace linqed_list
       System.Console.WriteLine($"Sum of purchases: ${purchases.Sum()}");
 
 
+      // What is our most expensive product?
+      List<double> prices = new List<double>()
+      {
+          879.45, 9442.85, 2454.63, 45.65, 2340.29, 34.03, 4786.45, 745.31, 21.76
+      };
+
+
+      System.Console.WriteLine($"Most expensive product costs: ${prices.Max()}");
+
+
+
+
+      /*
+          Store each number in the following List until a perfect square
+          is detected.
+
+          Ref: https://msdn.microsoft.com/en-us/library/system.math.sqrt(v=vs.110).aspx
+      */
+      List<int> wheresSquaredo = new List<int>()
+      {
+          66, 12, 8, 27, 82, 34, 7, 50, 19, 46, 81, 23, 30, 4, 68, 14
+      };
+
+      var listOfPerfectSquares = new List<int>();
+
+      for (int i = 0; i < 20; i++)
+      {
+        listOfPerfectSquares.Add(i * i);
+      }
+
+
+      System.Console.WriteLine(wheresSquaredo);
+
 
     }
   }
